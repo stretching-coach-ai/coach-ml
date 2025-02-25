@@ -1,0 +1,44 @@
+# 환경 변수 파일
+.env
+.env.*
+
+# Python 관련 파일
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 로그 파일
+*.log
+logs/
+
+# 임시 파일
+*.tmp
+*.bak
+*.swp
+*~
+
+# 데이터 파일 (필요에 따라 주석 처리)
+# data/enhanced/
+
+# IDE 관련 파일
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace 
