@@ -4,3 +4,290 @@
 2025-02-25 10:21:25,644 - __main__ - INFO - 전면 근육 데이터 수집 시작
 2025-02-25 10:22:21,221 - __main__ - INFO - 데이터 수집 완료: 10개 항목
 2025-02-25 10:22:21,221 - __main__ - INFO - 결과 저장 완료: data/raw/muscle_data_20250225_102221.json
+2025-02-25 10:31:49,047 - __main__ - INFO - 전면 근육 데이터 수집 시작
+2025-02-25 10:31:49,062 - __main__ - INFO - PubMed 검색 시작: 대흉근, 검색어: 'pectoralis major AND pectoralis major stretching'
+2025-02-25 10:31:49,892 - __main__ - INFO - PubMed 검색 결과: 대흉근, 50개 논문 ID 발견
+2025-02-25 10:31:49,892 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 1/50
+2025-02-25 10:31:54,505 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 11/50
+2025-02-25 10:31:57,175 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 21/50
+2025-02-25 10:31:59,854 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 31/50
+2025-02-25 10:32:02,423 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 41/50
+2025-02-25 10:32:06,630 - __main__ - INFO - PubMed 검색 시작: 대흉근, 검색어: 'pectoralis major AND chest stretching'
+2025-02-25 10:32:07,012 - __main__ - INFO - PubMed 검색 결과: 대흉근, 13개 논문 ID 발견
+2025-02-25 10:32:07,013 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 1/13
+2025-02-25 10:32:09,926 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 11/13
+2025-02-25 10:32:11,694 - __main__ - INFO - PubMed 검색 시작: 대흉근, 검색어: 'pectoralis major AND posture correction'
+2025-02-25 10:32:12,079 - __main__ - INFO - PubMed 검색 결과: 대흉근, 22개 논문 ID 발견
+2025-02-25 10:32:12,079 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 1/22
+2025-02-25 10:32:15,621 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 11/22
+2025-02-25 10:32:18,860 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 21/22
+2025-02-25 10:32:24,301 - __main__ - INFO - PubMed 검색 시작: 흉쇄유돌근, 검색어: 'sternocleidomastoid AND sternocleidomastoid stretching'
+2025-02-25 10:32:25,094 - __main__ - INFO - PubMed 검색 결과: 흉쇄유돌근, 50개 논문 ID 발견
+2025-02-25 10:32:25,095 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 1/50
+2025-02-25 10:32:28,015 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 11/50
+2025-02-25 10:32:30,770 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 21/50
+2025-02-25 10:32:33,495 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 31/50
+2025-02-25 10:32:36,178 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 41/50
+2025-02-25 10:32:40,268 - __main__ - INFO - PubMed 검색 시작: 흉쇄유돌근, 검색어: 'sternocleidomastoid AND neck stretching'
+2025-02-25 10:32:40,712 - __main__ - INFO - PubMed 검색 결과: 흉쇄유돌근, 50개 논문 ID 발견
+2025-02-25 10:32:40,712 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 1/50
+2025-02-25 10:32:44,555 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 11/50
+2025-02-25 10:32:47,322 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 21/50
+2025-02-25 10:32:50,235 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 31/50
+2025-02-25 10:32:53,888 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 41/50
+2025-02-25 10:32:57,415 - __main__ - INFO - PubMed 검색 시작: 흉쇄유돌근, 검색어: 'sternocleidomastoid AND forward head posture'
+2025-02-25 10:32:57,782 - __main__ - INFO - PubMed 검색 결과: 흉쇄유돌근, 31개 논문 ID 발견
+2025-02-25 10:32:57,783 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 1/31
+2025-02-25 10:33:02,180 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 11/31
+2025-02-25 10:33:04,934 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 21/31
+2025-02-25 10:33:08,037 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 31/31
+2025-02-25 10:33:12,633 - __main__ - INFO - 데이터 수집 완료: 100개 항목
+2025-02-25 10:33:12,633 - __main__ - INFO - 결과 저장 완료: data/raw/muscle_data_20250225_103312.json
+2025-02-25 10:34:06,844 - __main__ - INFO - 전면 근육 데이터 수집 시작
+2025-02-25 10:34:06,859 - __main__ - INFO - PubMed 검색 시작: 대흉근, 검색어: 'pectoralis major AND pectoralis major stretching'
+2025-02-25 10:34:07,627 - __main__ - INFO - PubMed 검색 결과: 대흉근, 50개 논문 ID 발견
+2025-02-25 10:34:07,627 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 1/50
+2025-02-25 10:34:10,546 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 11/50
+2025-02-25 10:34:13,246 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 21/50
+2025-02-25 10:34:16,233 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 31/50
+2025-02-25 10:34:19,461 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 41/50
+2025-02-25 10:34:24,612 - __main__ - INFO - PubMed 검색 시작: 대흉근, 검색어: 'pectoralis major AND chest stretching'
+2025-02-25 10:34:24,992 - __main__ - INFO - PubMed 검색 결과: 대흉근, 13개 논문 ID 발견
+2025-02-25 10:34:24,993 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 1/13
+2025-02-25 10:34:29,470 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 11/13
+2025-02-25 10:34:31,248 - __main__ - INFO - PubMed 검색 시작: 대흉근, 검색어: 'pectoralis major AND posture correction'
+2025-02-25 10:34:31,643 - __main__ - INFO - PubMed 검색 결과: 대흉근, 22개 논문 ID 발견
+2025-02-25 10:34:31,643 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 1/22
+2025-02-25 10:34:35,390 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 11/22
+2025-02-25 10:34:38,738 - __main__ - INFO - PubMed 논문 처리 중: 대흉근, 21/22
+2025-02-25 10:34:44,870 - __main__ - INFO - PubMed 검색 시작: 흉쇄유돌근, 검색어: 'sternocleidomastoid AND sternocleidomastoid stretching'
+2025-02-25 10:34:46,260 - __main__ - INFO - PubMed 검색 결과: 흉쇄유돌근, 50개 논문 ID 발견
+2025-02-25 10:34:46,261 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 1/50
+2025-02-25 10:34:49,000 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 11/50
+2025-02-25 10:34:51,959 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 21/50
+2025-02-25 10:34:55,254 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 31/50
+2025-02-25 10:34:58,540 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 41/50
+2025-02-25 10:35:03,157 - __main__ - INFO - PubMed 검색 시작: 흉쇄유돌근, 검색어: 'sternocleidomastoid AND neck stretching'
+2025-02-25 10:35:05,101 - __main__ - INFO - PubMed 검색 결과: 흉쇄유돌근, 50개 논문 ID 발견
+2025-02-25 10:35:05,102 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 1/50
+2025-02-25 10:35:08,402 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 11/50
+2025-02-25 10:35:11,699 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 21/50
+2025-02-25 10:35:14,906 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 31/50
+2025-02-25 10:35:18,812 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 41/50
+2025-02-25 10:35:22,241 - __main__ - INFO - PubMed 검색 시작: 흉쇄유돌근, 검색어: 'sternocleidomastoid AND forward head posture'
+2025-02-25 10:35:22,621 - __main__ - INFO - PubMed 검색 결과: 흉쇄유돌근, 31개 논문 ID 발견
+2025-02-25 10:35:22,622 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 1/31
+2025-02-25 10:35:25,656 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 11/31
+2025-02-25 10:35:28,242 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 21/31
+2025-02-25 10:35:31,351 - __main__ - INFO - PubMed 논문 처리 중: 흉쇄유돌근, 31/31
+2025-02-25 10:35:35,882 - __main__ - INFO - PubMed 검색 시작: 복직근, 검색어: 'rectus abdominis AND rectus abdominis stretching'
+2025-02-25 10:35:36,701 - __main__ - INFO - PubMed 검색 결과: 복직근, 50개 논문 ID 발견
+2025-02-25 10:35:36,701 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 1/50
+2025-02-25 10:35:39,549 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 11/50
+2025-02-25 10:35:42,504 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 21/50
+2025-02-25 10:35:45,766 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 31/50
+2025-02-25 10:35:48,897 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 41/50
+2025-02-25 10:35:53,103 - __main__ - INFO - PubMed 검색 시작: 복직근, 검색어: 'rectus abdominis AND abdominal stretching'
+2025-02-25 10:35:53,500 - __main__ - INFO - PubMed 검색 결과: 복직근, 43개 논문 ID 발견
+2025-02-25 10:35:53,500 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 1/43
+2025-02-25 10:35:56,401 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 11/43
+2025-02-25 10:36:02,696 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 21/43
+2025-02-25 10:36:05,411 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 31/43
+2025-02-25 10:36:08,860 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 41/43
+2025-02-25 10:36:10,668 - __main__ - INFO - PubMed 검색 시작: 복직근, 검색어: 'rectus abdominis AND core exercise'
+2025-02-25 10:36:11,264 - __main__ - INFO - PubMed 검색 결과: 복직근, 50개 논문 ID 발견
+2025-02-25 10:36:11,264 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 1/50
+2025-02-25 10:36:19,103 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 11/50
+2025-02-25 10:36:21,988 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 21/50
+2025-02-25 10:36:25,870 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 31/50
+2025-02-25 10:36:28,596 - __main__ - INFO - PubMed 논문 처리 중: 복직근, 41/50
+2025-02-25 10:36:36,089 - __main__ - INFO - PubMed 검색 시작: 외복사근, 검색어: 'external oblique AND external oblique stretching'
+2025-02-25 10:36:36,899 - __main__ - INFO - PubMed 검색 결과: 외복사근, 50개 논문 ID 발견
+2025-02-25 10:36:36,899 - __main__ - INFO - PubMed 논문 처리 중: 외복사근, 1/50
+2025-02-25 10:36:39,850 - __main__ - INFO - PubMed 논문 처리 중: 외복사근, 11/50
+2025-02-25 10:36:42,482 - __main__ - INFO - PubMed 논문 처리 중: 외복사근, 21/50
+2025-02-25 10:36:45,622 - __main__ - INFO - PubMed 논문 처리 중: 외복사근, 31/50
+2025-02-25 10:36:48,189 - __main__ - INFO - PubMed 논문 처리 중: 외복사근, 41/50
+2025-02-25 10:36:53,191 - __main__ - INFO - PubMed 검색 시작: 외복사근, 검색어: 'external oblique AND side stretching'
+2025-02-25 10:36:53,547 - __main__ - INFO - PubMed 검색 결과: 외복사근, 2개 논문 ID 발견
+2025-02-25 10:36:53,548 - __main__ - INFO - PubMed 논문 처리 중: 외복사근, 1/2
+2025-02-25 10:36:55,106 - __main__ - INFO - PubMed 검색 시작: 외복사근, 검색어: 'external oblique AND waist pain'
+2025-02-25 10:36:55,469 - __main__ - INFO - PubMed 검색 결과: 외복사근, 4개 논문 ID 발견
+2025-02-25 10:36:55,469 - __main__ - INFO - PubMed 논문 처리 중: 외복사근, 1/4
+2025-02-25 10:37:00,746 - __main__ - INFO - PubMed 검색 시작: 내전근, 검색어: 'adductor muscles AND adductor stretching'
+2025-02-25 10:37:01,541 - __main__ - INFO - PubMed 검색 결과: 내전근, 50개 논문 ID 발견
+2025-02-25 10:37:01,541 - __main__ - INFO - PubMed 논문 처리 중: 내전근, 1/50
+2025-02-25 10:37:05,348 - __main__ - INFO - PubMed 논문 처리 중: 내전근, 11/50
+2025-02-25 10:37:07,917 - __main__ - INFO - PubMed 논문 처리 중: 내전근, 21/50
+2025-02-25 10:37:10,736 - __main__ - INFO - PubMed 논문 처리 중: 내전근, 31/50
+2025-02-25 10:37:13,420 - __main__ - INFO - PubMed 논문 처리 중: 내전근, 41/50
+2025-02-25 10:37:17,893 - __main__ - INFO - PubMed 검색 시작: 내전근, 검색어: 'adductor muscles AND inner thigh stretching'
+2025-02-25 10:37:18,248 - __main__ - INFO - PubMed 검색 결과: 내전근, 0개 논문 ID 발견
+2025-02-25 10:37:21,448 - __main__ - INFO - PubMed 검색 시작: 대퇴직근, 검색어: 'rectus femoris AND rectus femoris stretching'
+2025-02-25 10:37:21,819 - __main__ - INFO - PubMed 검색 결과: 대퇴직근, 50개 논문 ID 발견
+2025-02-25 10:37:21,820 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 1/50
+2025-02-25 10:37:24,711 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 11/50
+2025-02-25 10:37:27,754 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 21/50
+2025-02-25 10:37:31,084 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 31/50
+2025-02-25 10:37:36,874 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 41/50
+2025-02-25 10:37:43,783 - __main__ - INFO - PubMed 검색 시작: 대퇴직근, 검색어: 'rectus femoris AND quadriceps stretching'
+2025-02-25 10:37:44,182 - __main__ - INFO - PubMed 검색 결과: 대퇴직근, 50개 논문 ID 발견
+2025-02-25 10:37:44,182 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 1/50
+2025-02-25 10:37:47,053 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 11/50
+2025-02-25 10:37:50,309 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 21/50
+2025-02-25 10:37:55,332 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 31/50
+2025-02-25 10:37:58,227 - __main__ - INFO - PubMed 논문 처리 중: 대퇴직근, 41/50
+2025-02-25 10:38:04,327 - __main__ - INFO - PubMed 검색 시작: 외측광근, 검색어: 'vastus lateralis AND vastus lateralis stretching'
+2025-02-25 10:38:04,719 - __main__ - INFO - PubMed 검색 결과: 외측광근, 50개 논문 ID 발견
+2025-02-25 10:38:04,719 - __main__ - INFO - PubMed 논문 처리 중: 외측광근, 1/50
+2025-02-25 10:38:08,515 - __main__ - INFO - PubMed 논문 처리 중: 외측광근, 11/50
+2025-02-25 10:38:11,376 - __main__ - INFO - PubMed 논문 처리 중: 외측광근, 21/50
+2025-02-25 10:38:14,647 - __main__ - INFO - PubMed 논문 처리 중: 외측광근, 31/50
+2025-02-25 10:38:17,323 - __main__ - INFO - PubMed 논문 처리 중: 외측광근, 41/50
+2025-02-25 10:38:21,237 - __main__ - INFO - PubMed 검색 시작: 외측광근, 검색어: 'vastus lateralis AND outer thigh stretching'
+2025-02-25 10:38:22,005 - __main__ - INFO - PubMed 검색 결과: 외측광근, 0개 논문 ID 발견
+2025-02-25 10:38:25,197 - __main__ - INFO - PubMed 검색 시작: 내측광근, 검색어: 'vastus medialis AND vastus medialis stretching'
+2025-02-25 10:38:25,570 - __main__ - INFO - PubMed 검색 결과: 내측광근, 50개 논문 ID 발견
+2025-02-25 10:38:25,570 - __main__ - INFO - PubMed 논문 처리 중: 내측광근, 1/50
+2025-02-25 10:38:28,496 - __main__ - INFO - PubMed 논문 처리 중: 내측광근, 11/50
+2025-02-25 10:38:31,773 - __main__ - INFO - PubMed 논문 처리 중: 내측광근, 21/50
+2025-02-25 10:38:34,930 - __main__ - INFO - PubMed 논문 처리 중: 내측광근, 31/50
+2025-02-25 10:38:38,614 - __main__ - INFO - PubMed 논문 처리 중: 내측광근, 41/50
+2025-02-25 10:38:42,849 - __main__ - INFO - PubMed 검색 시작: 내측광근, 검색어: 'vastus medialis AND inner thigh stretching'
+2025-02-25 10:38:43,214 - __main__ - INFO - PubMed 검색 결과: 내측광근, 0개 논문 ID 발견
+2025-02-25 10:38:46,406 - __main__ - INFO - PubMed 검색 시작: 봉공근, 검색어: 'sartorius AND sartorius stretching'
+2025-02-25 10:38:46,836 - __main__ - INFO - PubMed 검색 결과: 봉공근, 50개 논문 ID 발견
+2025-02-25 10:38:46,836 - __main__ - INFO - PubMed 논문 처리 중: 봉공근, 1/50
+2025-02-25 10:38:50,073 - __main__ - INFO - PubMed 논문 처리 중: 봉공근, 11/50
+2025-02-25 10:38:53,147 - __main__ - INFO - PubMed 논문 처리 중: 봉공근, 21/50
+2025-02-25 10:38:56,433 - __main__ - INFO - PubMed 논문 처리 중: 봉공근, 31/50
+2025-02-25 10:38:59,806 - __main__ - INFO - PubMed 논문 처리 중: 봉공근, 41/50
+2025-02-25 10:39:03,187 - __main__ - INFO - PubMed 검색 시작: 봉공근, 검색어: 'sartorius AND thigh stretching'
+2025-02-25 10:39:03,626 - __main__ - INFO - PubMed 검색 결과: 봉공근, 4개 논문 ID 발견
+2025-02-25 10:39:03,627 - __main__ - INFO - PubMed 논문 처리 중: 봉공근, 1/4
+2025-02-25 10:39:08,056 - __main__ - INFO - PubMed 검색 시작: 전경골근, 검색어: 'tibialis anterior AND tibialis anterior stretching'
+2025-02-25 10:39:08,483 - __main__ - INFO - PubMed 검색 결과: 전경골근, 50개 논문 ID 발견
+2025-02-25 10:39:08,484 - __main__ - INFO - PubMed 논문 처리 중: 전경골근, 1/50
+2025-02-25 10:39:12,311 - __main__ - INFO - PubMed 논문 처리 중: 전경골근, 11/50
+2025-02-25 10:39:16,023 - __main__ - INFO - PubMed 논문 처리 중: 전경골근, 21/50
+2025-02-25 10:39:18,991 - __main__ - INFO - PubMed 논문 처리 중: 전경골근, 31/50
+2025-02-25 10:39:21,861 - __main__ - INFO - PubMed 논문 처리 중: 전경골근, 41/50
+2025-02-25 10:39:26,174 - __main__ - INFO - PubMed 검색 시작: 전경골근, 검색어: 'tibialis anterior AND shin stretching'
+2025-02-25 10:39:26,666 - __main__ - INFO - PubMed 검색 결과: 전경골근, 18개 논문 ID 발견
+2025-02-25 10:39:26,667 - __main__ - INFO - PubMed 논문 처리 중: 전경골근, 1/18
+2025-02-25 10:39:30,092 - __main__ - INFO - PubMed 논문 처리 중: 전경골근, 11/18
+2025-02-25 10:39:35,483 - __main__ - INFO - 후면 근육 데이터 수집 시작
+2025-02-25 10:39:35,484 - __main__ - INFO - PubMed 검색 시작: 대둔근, 검색어: 'gluteus maximus AND gluteus maximus stretching'
+2025-02-25 10:39:35,925 - __main__ - INFO - PubMed 검색 결과: 대둔근, 40개 논문 ID 발견
+2025-02-25 10:39:35,925 - __main__ - INFO - PubMed 논문 처리 중: 대둔근, 1/40
+2025-02-25 10:39:39,475 - __main__ - INFO - PubMed 논문 처리 중: 대둔근, 11/40
+2025-02-25 10:39:42,210 - __main__ - INFO - PubMed 논문 처리 중: 대둔근, 21/40
+2025-02-25 10:39:45,244 - __main__ - INFO - PubMed 논문 처리 중: 대둔근, 31/40
+2025-02-25 10:39:48,713 - __main__ - INFO - PubMed 검색 시작: 대둔근, 검색어: 'gluteus maximus AND glute stretching'
+2025-02-25 10:39:49,058 - __main__ - INFO - PubMed 검색 결과: 대둔근, 0개 논문 ID 발견
+2025-02-25 10:39:52,368 - __main__ - INFO - PubMed 검색 시작: 광배근, 검색어: 'latissimus dorsi AND latissimus dorsi stretching'
+2025-02-25 10:39:52,762 - __main__ - INFO - PubMed 검색 결과: 광배근, 50개 논문 ID 발견
+2025-02-25 10:39:52,762 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 1/50
+2025-02-25 10:39:55,810 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 11/50
+2025-02-25 10:39:58,519 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 21/50
+2025-02-25 10:40:02,212 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 31/50
+2025-02-25 10:40:05,357 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 41/50
+2025-02-25 10:40:09,301 - __main__ - INFO - PubMed 검색 시작: 광배근, 검색어: 'latissimus dorsi AND back stretching'
+2025-02-25 10:40:09,687 - __main__ - INFO - PubMed 검색 결과: 광배근, 49개 논문 ID 발견
+2025-02-25 10:40:09,688 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 1/49
+2025-02-25 10:40:12,837 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 11/49
+2025-02-25 10:40:16,173 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 21/49
+2025-02-25 10:40:20,178 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 31/49
+2025-02-25 10:40:23,452 - __main__ - INFO - PubMed 논문 처리 중: 광배근, 41/49
+2025-02-25 10:40:29,051 - __main__ - INFO - PubMed 검색 시작: 단두, 검색어: 'biceps brachii short head AND biceps stretching'
+2025-02-25 10:40:29,427 - __main__ - INFO - PubMed 검색 결과: 단두, 6개 논문 ID 발견
+2025-02-25 10:40:29,427 - __main__ - INFO - PubMed 논문 처리 중: 단두, 1/6
+2025-02-25 10:40:33,569 - __main__ - INFO - PubMed 검색 시작: 단두, 검색어: 'biceps brachii short head AND arm stretching'
+2025-02-25 10:40:33,942 - __main__ - INFO - PubMed 검색 결과: 단두, 3개 논문 ID 발견
+2025-02-25 10:40:33,942 - __main__ - INFO - PubMed 논문 처리 중: 단두, 1/3
+2025-02-25 10:40:38,134 - __main__ - INFO - PubMed 검색 시작: 장두, 검색어: 'biceps brachii long head AND biceps stretching'
+2025-02-25 10:40:38,512 - __main__ - INFO - PubMed 검색 결과: 장두, 8개 논문 ID 발견
+2025-02-25 10:40:38,513 - __main__ - INFO - PubMed 논문 처리 중: 장두, 1/8
+2025-02-25 10:40:42,149 - __main__ - INFO - PubMed 검색 시작: 장두, 검색어: 'biceps brachii long head AND arm stretching'
+2025-02-25 10:40:42,527 - __main__ - INFO - PubMed 검색 결과: 장두, 5개 논문 ID 발견
+2025-02-25 10:40:42,528 - __main__ - INFO - PubMed 논문 처리 중: 장두, 1/5
+2025-02-25 10:40:47,814 - __main__ - INFO - PubMed 검색 시작: 비복근, 검색어: 'gastrocnemius AND gastrocnemius stretching'
+2025-02-25 10:40:48,278 - __main__ - INFO - PubMed 검색 결과: 비복근, 50개 논문 ID 발견
+2025-02-25 10:40:48,278 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 1/50
+2025-02-25 10:40:51,928 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 11/50
+2025-02-25 10:40:55,000 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 21/50
+2025-02-25 10:40:58,684 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 31/50
+2025-02-25 10:41:01,949 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 41/50
+2025-02-25 10:41:06,638 - __main__ - INFO - PubMed 검색 시작: 비복근, 검색어: 'gastrocnemius AND calf stretching'
+2025-02-25 10:41:07,129 - __main__ - INFO - PubMed 검색 결과: 비복근, 50개 논문 ID 발견
+2025-02-25 10:41:07,129 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 1/50
+2025-02-25 10:41:11,456 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 11/50
+2025-02-25 10:41:15,237 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 21/50
+2025-02-25 10:41:18,766 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 31/50
+2025-02-25 10:41:21,856 - __main__ - INFO - PubMed 논문 처리 중: 비복근, 41/50
+2025-02-25 10:41:27,717 - __main__ - INFO - PubMed 검색 시작: 반건양근, 검색어: 'semitendinosus AND semitendinosus stretching'
+2025-02-25 10:41:28,194 - __main__ - INFO - PubMed 검색 결과: 반건양근, 50개 논문 ID 발견
+2025-02-25 10:41:28,195 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 1/50
+2025-02-25 10:41:31,941 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 11/50
+2025-02-25 10:41:35,248 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 21/50
+2025-02-25 10:41:38,345 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 31/50
+2025-02-25 10:41:41,063 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 41/50
+2025-02-25 10:41:46,202 - __main__ - INFO - PubMed 검색 시작: 반건양근, 검색어: 'semitendinosus AND hamstring stretching'
+2025-02-25 10:41:47,071 - __main__ - INFO - PubMed 검색 결과: 반건양근, 50개 논문 ID 발견
+2025-02-25 10:41:47,072 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 1/50
+2025-02-25 10:41:50,525 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 11/50
+2025-02-25 10:41:53,836 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 21/50
+2025-02-25 10:41:56,553 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 31/50
+2025-02-25 10:42:00,809 - __main__ - INFO - PubMed 논문 처리 중: 반건양근, 41/50
+2025-02-25 10:42:07,023 - __main__ - INFO - PubMed 검색 시작: 삼각근, 검색어: 'deltoid AND deltoid stretching'
+2025-02-25 10:42:07,391 - __main__ - INFO - PubMed 검색 결과: 삼각근, 50개 논문 ID 발견
+2025-02-25 10:42:07,392 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 1/50
+2025-02-25 10:42:10,873 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 11/50
+2025-02-25 10:42:15,014 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 21/50
+2025-02-25 10:42:19,104 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 31/50
+2025-02-25 10:42:22,557 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 41/50
+2025-02-25 10:42:26,254 - __main__ - INFO - PubMed 검색 시작: 삼각근, 검색어: 'deltoid AND shoulder stretching'
+2025-02-25 10:42:26,630 - __main__ - INFO - PubMed 검색 결과: 삼각근, 50개 논문 ID 발견
+2025-02-25 10:42:26,630 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 1/50
+2025-02-25 10:42:30,563 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 11/50
+2025-02-25 10:42:34,319 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 21/50
+2025-02-25 10:42:36,986 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 31/50
+2025-02-25 10:42:39,392 - __main__ - INFO - PubMed 논문 처리 중: 삼각근, 41/50
+2025-02-25 10:42:45,150 - __main__ - INFO - PubMed 검색 시작: 삼두근, 검색어: 'triceps brachii AND triceps stretching'
+2025-02-25 10:42:45,516 - __main__ - INFO - PubMed 검색 결과: 삼두근, 50개 논문 ID 발견
+2025-02-25 10:42:45,516 - __main__ - INFO - PubMed 논문 처리 중: 삼두근, 1/50
+2025-02-25 10:42:50,342 - __main__ - INFO - PubMed 논문 처리 중: 삼두근, 11/50
+2025-02-25 10:42:52,887 - __main__ - INFO - PubMed 논문 처리 중: 삼두근, 21/50
+2025-02-25 10:42:55,680 - __main__ - INFO - PubMed 논문 처리 중: 삼두근, 31/50
+2025-02-25 10:42:58,348 - __main__ - INFO - PubMed 논문 처리 중: 삼두근, 41/50
+2025-02-25 10:43:03,078 - __main__ - INFO - PubMed 검색 시작: 삼두근, 검색어: 'triceps brachii AND back arm stretching'
+2025-02-25 10:43:03,449 - __main__ - INFO - PubMed 검색 결과: 삼두근, 3개 논문 ID 발견
+2025-02-25 10:43:03,449 - __main__ - INFO - PubMed 논문 처리 중: 삼두근, 1/3
+2025-02-25 10:43:07,705 - __main__ - INFO - PubMed 검색 시작: 전완근, 검색어: 'forearm muscles AND forearm stretching'
+2025-02-25 10:43:08,099 - __main__ - INFO - PubMed 검색 결과: 전완근, 50개 논문 ID 발견
+2025-02-25 10:43:08,099 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 1/50
+2025-02-25 10:43:11,314 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 11/50
+2025-02-25 10:43:14,164 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 21/50
+2025-02-25 10:43:16,907 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 31/50
+2025-02-25 10:43:20,324 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 41/50
+2025-02-25 10:43:24,135 - __main__ - INFO - PubMed 검색 시작: 전완근, 검색어: 'forearm muscles AND wrist stretching'
+2025-02-25 10:43:24,514 - __main__ - INFO - PubMed 검색 결과: 전완근, 50개 논문 ID 발견
+2025-02-25 10:43:24,514 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 1/50
+2025-02-25 10:43:27,357 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 11/50
+2025-02-25 10:43:29,948 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 21/50
+2025-02-25 10:43:33,238 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 31/50
+2025-02-25 10:43:35,937 - __main__ - INFO - PubMed 논문 처리 중: 전완근, 41/50
+2025-02-25 10:43:42,574 - __main__ - INFO - PubMed 검색 시작: 승모근, 검색어: 'trapezius AND trapezius stretching'
+2025-02-25 10:43:42,958 - __main__ - INFO - PubMed 검색 결과: 승모근, 50개 논문 ID 발견
+2025-02-25 10:43:42,958 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 1/50
+2025-02-25 10:43:46,982 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 11/50
+2025-02-25 10:43:51,021 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 21/50
+2025-02-25 10:43:53,831 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 31/50
+2025-02-25 10:43:56,443 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 41/50
+2025-02-25 10:44:00,155 - __main__ - INFO - PubMed 검색 시작: 승모근, 검색어: 'trapezius AND neck shoulder stretching'
+2025-02-25 10:44:00,561 - __main__ - INFO - PubMed 검색 결과: 승모근, 26개 논문 ID 발견
+2025-02-25 10:44:00,561 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 1/26
+2025-02-25 10:44:04,116 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 11/26
+2025-02-25 10:44:08,467 - __main__ - INFO - PubMed 논문 처리 중: 승모근, 21/26
+2025-02-25 10:44:14,033 - __main__ - INFO - 데이터 수집 완료: 1190개 항목
+2025-02-25 10:44:14,033 - __main__ - INFO - 결과 저장 완료: data/raw/muscle_data_20250225_104413.json
