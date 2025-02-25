@@ -23,6 +23,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+venv/
 
 # 로그 파일
 *.log

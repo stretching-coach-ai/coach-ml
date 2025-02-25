@@ -46,6 +46,64 @@ class MetadataGenerator:
         self.batch_size = 10 
         self.delay = 1 
     
+    def determine_prompt_type(self, exercise: Dict[str, Any]) -> str:
+        """논문 내용에 따라 적절한 프롬프트 유형 결정
+        
+        Args:
+            exercise: 운동/스트레칭 데이터
+            
+        Returns:
+            str: "protocol_based" 또는 "content_based"
+        """
+        # 프로토콜 정보 확인
+        protocol = exercise.get('protocol', {})
+        steps = protocol.get('steps', [])
+        
+        # 초록 내용 분석
+        abstract = exercise.get('abstract', '').lower()
+        title = exercise.get('title', '').lower()
+        
+        # 스트레칭 관련 키워드
+        stretching_keywords = [
+            "stretching exercise", "스트레칭 운동", "stretch protocol", 
+            "stretching method", "stretching technique", "perform stretch",
+            "held for", "seconds", "repetitions", "유지", "반복", "스트레칭",
+            "신장", "운동", "exercise", "protocol", "stretch", "hold"
+        ]
+        
+        # 스트레칭 프로토콜 포함 여부 판단
+        has_protocol = False
+        
+        # 1. 구체적인 단계가 있는지 확인
+        if len(steps) >= 2:
+            for step in steps:
+                if isinstance(step, str) and any(keyword in step.lower() for keyword in stretching_keywords):
+                    has_protocol = True
+                    logger.info(f"프로토콜 단계에서 스트레칭 키워드 발견: {step[:50]}...")
+                    break
+        
+        # 2. 제목에 스트레칭 관련 키워드가 있는지 확인
+        if not has_protocol:
+            if any(keyword in title for keyword in stretching_keywords):
+                has_protocol = True
+                logger.info(f"제목에서 스트레칭 키워드 발견: {title}")
+        
+        # 3. 초록에 스트레칭 방법 관련 내용이 있는지 확인
+        if not has_protocol:
+            protocol_indicators = [
+                "performed for", "maintained for", "held for", 
+                "stretch position", "seconds", "minutes", "sets", "repetitions",
+                "protocol consisted of", "exercise protocol", "stretching protocol",
+                "초 동안", "분 동안", "세트", "반복", "유지", "스트레칭 방법", "운동 방법"
+            ]
+            if any(indicator in abstract for indicator in protocol_indicators):
+                has_protocol = True
+                logger.info(f"초록에서 프로토콜 지표 발견")
+        
+        prompt_type = "protocol_based" if has_protocol else "content_based"
+        logger.info(f"결정된 프롬프트 유형: {prompt_type}")
+        return prompt_type
+    
     def create_metadata_prompt(self, exercise: Dict[str, Any], muscle_name: str, muscle_info: Dict[str, Any]) -> str:
         """메타데이터 생성을 위한 프롬프트 생성"""
         
@@ -261,6 +319,10 @@ class MetadataGenerator:
     def generate_metadata_for_exercise(self, exercise: Dict[str, Any], muscle_name: str, muscle_info: Dict[str, Any]) -> Dict[str, Any]:
         """운동 데이터에 대한 메타데이터 생성"""
         try:
+            # 프롬프트 유형 결정
+            prompt_type = self.determine_prompt_type(exercise)
+            
+            # 기본 프롬프트 생성
             prompt = self.create_metadata_prompt(exercise, muscle_name, muscle_info)
             
             # OpenAI API 호출
@@ -273,12 +335,17 @@ class MetadataGenerator:
             
             # 응답에서 JSON 추출
             metadata = self.extract_json_from_response(response.choices[0].message.content)
+            
+            # 메타데이터에 생성 방식 추가
+            metadata["생성_방식"] = prompt_type
+            
             return metadata
             
         except Exception as e:
             logger.error(f"메타데이터 생성 중 오류 발생: {str(e)}")
             return {
-                "error": f"메타데이터 생성 중 오류 발생: {str(e)}"
+                "error": f"메타데이터 생성 중 오류 발생: {str(e)}",
+                "생성_방식": "error"
             }
     
     def process_muscle_data(self, data: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, Any]:
