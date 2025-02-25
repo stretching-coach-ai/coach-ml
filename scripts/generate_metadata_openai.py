@@ -533,8 +533,13 @@ class MetadataGenerator:
             # 프롬프트 유형 결정
             prompt_type = self.determine_prompt_type(exercise)
             
-            # 기본 프롬프트 생성
-            prompt = self.create_metadata_prompt(exercise, muscle_name, muscle_info)
+            # 프롬프트 유형에 따라 적절한 프롬프트 생성
+            if prompt_type == "protocol_based":
+                prompt = self.create_protocol_based_prompt(exercise, muscle_name, muscle_info)
+                logger.info(f"프로토콜 기반 프롬프트 생성: {exercise.get('title', '')[:50]}...")
+            else:  # content_based
+                prompt = self.create_content_based_prompt(exercise, muscle_name, muscle_info)
+                logger.info(f"콘텐츠 기반 프롬프트 생성: {exercise.get('title', '')[:50]}...")
             
             # OpenAI API 호출
             response = self.client.chat.completions.create(
