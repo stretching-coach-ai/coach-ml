@@ -43,8 +43,8 @@ class MetadataGenerator:
         """초기화"""
         self.model = model
         self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.batch_size = 10  # 배치 크기 (API 제한에 맞게 조정)
-        self.delay = 1  # 요청 간 딜레이 (초)
+        self.batch_size = 10 
+        self.delay = 1 
     
     def create_metadata_prompt(self, exercise: Dict[str, Any], muscle_name: str, muscle_info: Dict[str, Any]) -> str:
         """메타데이터 생성을 위한 프롬프트 생성"""
@@ -112,7 +112,7 @@ class MetadataGenerator:
            - 중단해야_할_신호: 구체적인 경고 신호 목록
         
         7. 검색 및 추천용 태그:
-           - 증상_관련_태그: 관련 증상 키워드 목록 (최소 10개)
+           - 증상_관련_태그: 관련 증상 키워드 목록 (최소 5개)
            - 직업_관련_태그: 관련 직업 키워드 목록 (최소 5개)
            - 상황_관련_태그: 관련 상황 키워드 목록 (최소 5개)
            - 효과_관련_태그: 관련 효과 키워드 목록 (최소 8개)
