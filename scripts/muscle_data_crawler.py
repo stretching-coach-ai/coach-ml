@@ -271,7 +271,7 @@ class StretchingDataCrawler:
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
         }
-        self.delay = 0.5  # 요청 간 딜레이 (초) - 0.5초로 감소
+        self.delay = 1  # 요청 간 딜레이 (초)
         
         # API 엔드포인트
         self.endpoints = {
@@ -337,30 +337,23 @@ class StretchingDataCrawler:
             search_params = {
                 "db": "pubmed",
                 "term": f"{search_query} AND (exercise OR stretching OR rehabilitation)",
-                "retmax": "50",  # 최대 50개 결과 가져오기
+                "retmax": "10",
                 "format": "json"
             }
-            
-            logger.info(f"PubMed 검색 시작: {muscle_name}, 검색어: '{search_query}'")
             
             async with self.session.get(search_url, params=search_params) as response:
                 if response.status == 200:
                     data = await response.json()
                     ids = data.get("esearchresult", {}).get("idlist", [])
                     
-                    logger.info(f"PubMed 검색 결과: {muscle_name}, {len(ids)}개 논문 ID 발견")
-                    
                     # 검색된 논문 상세 정보 수집
-                    for i, pmid in enumerate(ids):
+                    for pmid in ids:
                         fetch_url = f"{self.endpoints['pubmed']}/efetch.fcgi"
                         fetch_params = {
                             "db": "pubmed",
                             "id": pmid,
                             "retmode": "xml"
                         }
-                        
-                        if i % 10 == 0:
-                            logger.info(f"PubMed 논문 처리 중: {muscle_name}, {i+1}/{len(ids)}")
                         
                         async with self.session.get(fetch_url, params=fetch_params) as fetch_response:
                             if fetch_response.status == 200:
@@ -388,8 +381,8 @@ class StretchingDataCrawler:
                                         },
                                         "timestamp": datetime.now().isoformat()
                                     })
-                    
-                    await asyncio.sleep(self.delay)
+                        
+                        await asyncio.sleep(self.delay)
             
             await asyncio.sleep(self.delay)
             
@@ -406,8 +399,7 @@ class StretchingDataCrawler:
             # 검색 요청
             search_params = {
                 "q": search_query,
-                "sort": "relevance",
-                "page_size": "50"  # 페이지 크기 증가
+                "sort": "relevance"
             }
             
             async with self.session.get(self.endpoints["koreamed"], params=search_params) as response:
@@ -455,7 +447,7 @@ class StretchingDataCrawler:
                 "query": search_query,
                 "content-type": "article",
                 "field": "exercise",
-                "pageSize": "50"  # 페이지 크기 증가
+                "pageSize": "10"
             }
             
             async with self.session.get(self.endpoints["jospt"], params=search_params) as response:
