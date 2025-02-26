@@ -22,16 +22,25 @@ from tqdm import tqdm
 from dotenv import load_dotenv
 import openai
 
+# 로그 디렉토리 생성
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
+# 현재 시간을 기반으로 로그 파일명 생성
+log_filename = f"metadata_generation_{time.strftime('%Y%m%d_%H%M%S')}.log"
+log_path = log_dir / log_filename
+
 # 로깅 설정
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("metadata_generation.log"),
+        logging.FileHandler(log_path),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
+logger.info(f"로그 파일 생성: {log_path}")
 
 # 환경 변수 로드
 load_dotenv()
@@ -45,6 +54,7 @@ class MetadataGenerator:
         self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.batch_size = 10 
         self.delay = 1 
+        self.save_interval = 5  # 5개 항목마다 중간 저장
         
     
     def determine_prompt_type(self, exercise: Dict[str, Any]) -> str:
@@ -390,7 +400,8 @@ class MetadataGenerator:
            - 통증_표현_사전: 다양한 통증 표현과 그에 해당하는 의학적/전문적 용어를 매핑한 사전
              (예: "찌릿찌릿함" -> "신경통", "뻐근함" -> "근육 긴장", "화끈거림" -> "염증성 통증" 등)
            - 통증_특성_키워드: 통증의 특성을 설명하는 다양한 키워드 목록
-             (날카로운, 둔한, 찌릿한, 욱신거리는, 쑤시는, 뻐근한, 당기는, 화끈거리는, 아리는, 저린, 무감각한 등)
+             (날카로운, 둔한, 찌릿한, 욱신거리는, 쑤시는, 뻐근한, 당기는, 화끈거리는, 아리는, 저린, 
+             무감각한, 결리는, 묵직한, 따끔한, 터질 것 같은)
         
         9. 사용자_맞춤_정보:
            - 통증_설명별_적합도: 다양한 통증 설명별 0-10 적합도 점수 (최소 15개 이상의 다양한 통증 표현 포함)
@@ -564,10 +575,11 @@ class MetadataGenerator:
                 "생성_방식": "error"
             }
     
-    def process_muscle_data(self, data: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, Any]:
+    def process_muscle_data(self, data: Dict[str, Any], limit: Optional[int] = None, output_path: Optional[Path] = None) -> Dict[str, Any]:
         """근육 데이터 처리 및 메타데이터 생성"""
         enhanced_data = data.copy()
         total_processed = 0
+        last_save_count = 0
         
         # 모든 근육 데이터 처리
         for muscle_name, muscle_data in tqdm(enhanced_data["muscles"].items(), desc="근육 처리 중"):
@@ -586,10 +598,20 @@ class MetadataGenerator:
                 
                 total_processed += 1
                 
+                # 중간 저장 수행
+                if output_path and (total_processed - last_save_count >= self.save_interval):
+                    self._save_intermediate_data(enhanced_data, output_path, total_processed)
+                    last_save_count = total_processed
+                
                 # 배치 처리를 위한 딜레이
                 if (i + 1) % self.batch_size == 0:
                     logger.info(f"{muscle_name}: {i+1}/{len(exercises)} 운동 처리 완료")
                     time.sleep(self.delay)
+            
+            # 근육별 처리 완료 후 중간 저장
+            if output_path:
+                self._save_intermediate_data(enhanced_data, output_path, total_processed)
+                last_save_count = total_processed
             
             # 처리 항목 수 제한 확인
             if limit and total_processed >= limit:
@@ -601,16 +623,46 @@ class MetadataGenerator:
         enhanced_data["metadata"]["enhanced_items"] = total_processed
         enhanced_data["metadata"]["enhancement_model"] = self.model
         
+        # 최종 저장
+        if output_path:
+            self._save_intermediate_data(enhanced_data, output_path, total_processed, is_final=True)
+        
         return enhanced_data
+    
+    def _save_intermediate_data(self, data: Dict[str, Any], output_path: Path, processed_count: int, is_final: bool = False):
+        """중간 데이터 저장"""
+        try:
+            # 임시 파일명 생성 (최종 저장이 아닌 경우)
+            if not is_final:
+                temp_path = output_path.with_name(f"{output_path.stem}_temp_{processed_count}{output_path.suffix}")
+            else:
+                temp_path = output_path
+            
+            # 데이터 저장
+            with open(temp_path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            
+            status = "최종" if is_final else "중간"
+            logger.info(f"{status} 데이터 저장 완료: {temp_path} (처리된 항목: {processed_count}개)")
+            
+            # 최신 처리 상태 로그 파일 생성
+            status_path = output_path.parent / "processing_status.txt"
+            with open(status_path, 'w', encoding='utf-8') as f:
+                f.write(f"마지막 업데이트: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"처리된 항목: {processed_count}개\n")
+                f.write(f"저장 파일: {temp_path}\n")
+                
+        except Exception as e:
+            logger.error(f"데이터 저장 중 오류 발생: {e}")
 
 def main():
     """메인 함수"""
-    parser = argparse.ArgumentParser(description="스트레칭 데이터 메타데이터 생성 스크립트")
+    parser = argparse.ArgumentParser(description="스트레칭 데이터 메타데이터 생성")
     parser.add_argument("--input", required=True, help="입력 파일 경로")
     parser.add_argument("--output", required=True, help="출력 파일 경로")
-    parser.add_argument("--limit", type=int, help="처리할 최대 항목 수")
     parser.add_argument("--model", default="gpt-4o-mini", help="사용할 OpenAI 모델")
-    
+    parser.add_argument("--limit", type=int, help="처리할 최대 항목 수")
+    parser.add_argument("--save-interval", type=int, default=5, help="중간 저장 간격 (항목 수)")
     args = parser.parse_args()
     
     input_path = Path(args.input)
@@ -619,7 +671,7 @@ def main():
     # 입력 파일 확인
     if not input_path.exists():
         logger.error(f"입력 파일이 존재하지 않습니다: {input_path}")
-        return
+        exit(1)
     
     # 출력 디렉토리 생성
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -631,16 +683,13 @@ def main():
     
     # 메타데이터 생성기 초기화
     generator = MetadataGenerator(model=args.model)
+    generator.save_interval = args.save_interval
     
     # 데이터 처리
     logger.info("메타데이터 생성 시작")
-    enhanced_data = generator.process_muscle_data(data, args.limit)
+    enhanced_data = generator.process_muscle_data(data, args.limit, output_path)
     
-    # 결과 저장
-    logger.info(f"결과 저장 중: {output_path}")
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(enhanced_data, f, ensure_ascii=False, indent=2)
-    
+    # 결과 저장은 process_muscle_data 내에서 이미 수행됨
     logger.info("메타데이터 생성 완료")
 
 if __name__ == "__main__":
